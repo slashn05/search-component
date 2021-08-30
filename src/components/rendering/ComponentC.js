@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const styles = { border: '1px solid blue', padding: 10, margin: 10 };
 
-const ComponentC = () => {
+const ComponentC = React.memo(() => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -20,6 +20,6 @@ const ComponentC = () => {
       </button>
     </div>
   );
-};
+});
 
 export default ComponentC;
