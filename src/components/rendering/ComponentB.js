@@ -20,7 +20,7 @@ const ComponentB = () => {
       >
         add
       </button>
-        <ComponentC styles={{ border: '1px solid blue', padding: 10, margin: 10 }}/>
+        <ComponentC styles={styles}/>
     </div>
   );
 };
