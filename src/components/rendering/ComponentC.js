@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const styles = { border: '1px solid blue', padding: 10, margin: 10 };
 
-const ComponentC = React.memo(() => {
+const ComponentC = React.memo(({styles}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
