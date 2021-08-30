@@ -1,12 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import ComponentC from './ComponentC';
 
 const styles = { border: '1px solid blue', padding: 10, margin: 10 };
 
-const ComponentB = ({children}) => {
-  useEffect(() => {
-    console.log('Component B - Rendered')
-  }, []);
+const ComponentB = () => {
+  const [count, setCount] = useState(0);
 
-return <div style={styles}> Component B {children}</div>};
+  useEffect(() => {
+    console.log('B - Rendered');
+  });
+
+  return (
+    <div style={styles}>
+      B - {count}
+      <button
+        onClick={() => {
+          setCount((prev) => prev + 1);
+        }}
+      >
+        add
+      </button>
+        <ComponentC />
+    </div>
+  );
+};
 
 export default ComponentB;
