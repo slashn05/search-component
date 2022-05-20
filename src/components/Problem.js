@@ -14,7 +14,7 @@ const Problem = () => {
     <div>
       <p>You clicked {count} times</p>
       <button onClick={() => handleAlertClick(count)}>Show alert</button>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   );
 };
